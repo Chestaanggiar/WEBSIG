@@ -1,0 +1,173 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+	<marquee>Start To Learn New Knowledge With Us!</marquee>
+</body>
+
+<body>
+  <header>
+		<h1>GEOGRAPHY EDUCATION</h1> 
+  </header>
+  
+  <menu>
+    <a href="index.html">Spasial</a>
+    <a href="Statistic.html">Geostatistik</a>
+    <a href="UniqueDestination.html">Destination</a>
+    <a href="AboutUs.html">About</a> 
+  </menu>
+  <center>
+  <h3>Data Statistik Perubahan Penggunaan Lahan Wilayah Kec. Gresik, Kebomas, dan Cerme Kabupaten Gresik, Jawa Timur Indonesia</h3>
+  </center>
+
+  <center>
+  <body>
+    <div style="width: 80%; margin: auto;">
+      <canvas id="perubahanLahanChart"></canvas>
+  </div>
+  <script type="text/javascript">
+    // Data perubahan penggunaan lahan
+    var dataPerubahanLahan = [
+       { jenis: 'Permukiman', pl2019: 12, pl2023: 10 },
+       { jenis: 'Bangunan', pl2019: 5, pl2023: 12 },
+       { jenis: 'Ladang', pl2019: 1, pl2023:  2 },
+       { jenis: 'Sawah', pl2019: 1, pl2023: 0 },
+       { jenis: 'Lahan Terbuka', pl2019: 1, pl2023: 1 },
+       { jenis: 'Kebun', pl2019: 1, pl2023: 1 },
+       { jenis: 'Empang', pl2019: 8, pl2023: 0 },
+       { jenis: 'Perumahan padat teratur', pl2019: 1, pl2023: 4 }
+       
+   ];
+
+   // Inisialisasi chart
+   var ctx = document.getElementById('perubahanLahanChart').getContext('2d');
+   var perubahanLahanChart = new Chart(ctx, {
+       type: 'bar',
+       data: {
+           labels: dataPerubahanLahan.map(item => item.jenis),
+           datasets: [{
+               label: 'PL 2019',
+               backgroundColor: 'rgb(255, 160, 122)',
+               borderColor: 'rgba(75, 192, 192, 1)',
+               borderWidth: 1,
+               data: dataPerubahanLahan.map(item => item.pl2019)
+           }, {
+               label: 'PL 2023',
+               backgroundColor: 'rgba(152, 251, 152)',
+               borderColor: 'rgba(255, 99, 132, 1)',
+               borderWidth: 1,
+               data: dataPerubahanLahan.map(item => item.pl2023)
+           }]
+       },
+       options: {
+           scales: {
+               y: {
+                   beginAtZero: true
+               }
+           }
+       }
+   });
+</script>
+
+
+</style>
+        <style>
+        html, body {
+            background-color:beige;
+        }
+        .ol-control button {
+            background-color: #BFFCC6 !important;
+            color: #000000 !important;
+            border-radius: 0px !important;
+        }
+        .ol-zoom, .geolocate, .gcd-gl-control .ol-control {
+            background-color: rgba(255,255,255,.4) !important;
+            padding: 3px !important;
+        }
+        .ol-scale-line {
+            background: none !important;
+        }
+        .ol-scale-line-inner {
+            border: 2px solid #f8f8f8 !important;
+            border-top: none !important;
+            background: rgba(255, 255, 255, 0.5) !important;
+            color: black !important;
+        }
+        </style>
+
+        <style>
+        .geolocate {
+            top: 65px;
+            left: .5em;
+        }
+        .ol-touch .geolocate {
+            top: 80px;
+        }
+        </style>
+<style>
+.tooltip {
+  position: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  color: white;
+  padding: 4px 8px;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+.tooltip-measure {
+  opacity: 1;
+  font-weight: bold;
+}
+.tooltip-static {
+  background-color: #ffcc33;
+  color: black;
+  border: 1px solid white;
+}
+.tooltip-measure:before,
+.tooltip-static:before {
+  border-top: 6px solid rgba(0, 0, 0, 0.5);
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  margin-left: -7px;
+  left: 50%;
+}
+.tooltip-static:before {
+  border-top-color: #ffcc33;
+}
+.measure-control {
+  top: 100px;
+  left: .5em;
+  display: flex;
+}
+.ol-touch .measure-control {
+  top: 130px;
+}
+.measure-control label {
+  padding: 1px;
+  padding-right: 4px;
+}
+</style>
+        <style>
+        #map {
+            width: 1102px;
+            height: 942px;
+        }
+        </style>
+        <title></title>
+    </head>
+
+  <footer>
+		<p>Oleh Chesta, Teshalonika, Dimas 2023</p>
+  </footer>
+ </body>
+ 
+ 
+ </html>
